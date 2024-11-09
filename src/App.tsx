@@ -4,7 +4,15 @@ import "./App.css"
 function App() {
   return (
     <div>
-      <Table rowSize={3} colSize={3} />
+      <Table
+        rowSize={3}
+        colSize={3}
+        answer={[
+          [true, false, true],
+          [false, true, false],
+          [true, false, true],
+        ]}
+      />
     </div>
   )
 }
