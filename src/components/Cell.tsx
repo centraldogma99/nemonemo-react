@@ -1,10 +1,5 @@
 import type { ComponentProps } from "react"
-
-export enum CellStatus {
-  Empty,
-  X,
-  Filled,
-}
+import { CellStatus } from "../constants/Cell"
 
 interface CellProps extends ComponentProps<"td"> {
   status: CellStatus
@@ -12,9 +7,11 @@ interface CellProps extends ComponentProps<"td"> {
 
 export const Cell = ({ status, ...tdProps }: CellProps) => {
   return (
-    <td {...tdProps}>
+    <td
+      className={`${status === CellStatus.Filled ? "bg-black" : ""} select-none ${tdProps.className}`}
+      {...tdProps}
+    >
       {status === CellStatus.X && "X"}
-      {status === CellStatus.Filled && "O"}
     </td>
   )
 }
