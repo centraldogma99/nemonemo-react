@@ -1,7 +1,12 @@
+import { Table } from "#components/Table.tsx"
 import "./App.css"
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>
+  return (
+    <div>
+      <Table rowSize={3} colSize={3} />
+    </div>
+  )
 }
 
 export default App

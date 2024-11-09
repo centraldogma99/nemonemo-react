@@ -8,8 +8,8 @@ interface CellProps extends ComponentProps<"td"> {
 export const Cell = ({ status, ...tdProps }: CellProps) => {
   return (
     <td
-      className={`select-none ${status === CellStatus.Filled ? "bg-black" : ""} ${tdProps.className}`}
       {...tdProps}
+      className={`border-1 h-6 w-6 select-none border border-dashed border-black text-sm text-black ${status === CellStatus.Filled ? "bg-black" : ""}`}
     >
       {status === CellStatus.X && "X"}
     </td>
