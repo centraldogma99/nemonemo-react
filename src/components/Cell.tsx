@@ -1,4 +1,4 @@
-import type { ComponentProps } from "react";
+import type { ComponentProps } from "react"
 
 export enum CellStatus {
   Empty,
@@ -7,7 +7,7 @@ export enum CellStatus {
 }
 
 interface CellProps extends ComponentProps<"td"> {
-  status: CellStatus;
+  status: CellStatus
 }
 
 export const Cell = ({ status, ...tdProps }: CellProps) => {
@@ -16,5 +16,5 @@ export const Cell = ({ status, ...tdProps }: CellProps) => {
       {status === CellStatus.X && "X"}
       {status === CellStatus.Filled && "O"}
     </td>
-  );
-};
+  )
+}
